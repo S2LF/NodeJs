@@ -1,0 +1,36 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+    <div>
+        <a href="../">Retour</a>
+    </div>
+    
+<section>
+
+    <div>
+        <h2>Liste des tables</h2>
+
+        
+        {% for i in 1..10 %}
+
+            <a href="/table/{{ i }}">{{ i }}</a>
+        
+        {% endfor %}
+        
+    </div>    
+    <div>
+
+    <h2>Table de {{nb}}</h2>
+    {% for cle, valeur in multis %}
+    
+        <p> {{ cle }} = {{ valeur }}</p>
+
+    {% endfor %}
+
+    </div>
+
+    
+</section>
+    
+{% endblock %}
